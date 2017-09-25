@@ -1,0 +1,19 @@
+{
+  "name": "wmdd4980-project-ii",
+  "version": "1.0.0",
+  "description": "Project for wmdd4980 course on Langara Web and mobile dev program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goliveira-daniel/WMDD-4980-Project-II.git"
+  },
+  "author": "Daniel Garcia de Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goliveira-daniel/WMDD-4980-Project-II/issues"
+  },
+  "homepage": "https://github.com/goliveira-daniel/WMDD-4980-Project-II#readme"
+}
