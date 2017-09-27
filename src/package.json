@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/goliveira-daniel/WMDD-4980-Project-II/issues"
   },
-  "homepage": "https://github.com/goliveira-daniel/WMDD-4980-Project-II#readme"
+  "homepage": "https://github.com/goliveira-daniel/WMDD-4980-Project-II#readme",
+  "devDependencies": {
+    "fullcalendar": "^3.5.1"
+  }
 }
