@@ -1,0 +1,89 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Damion');
+@import url('https://fonts.googleapis.com/css?family=Sarala|Cantarell');
+
+*{
+    font-family: 'Cantarell';
+}
+body {
+    
+}
+.navbar-brand{
+font-family: "Damion";
+font-size: 3rem;
+
+}
+nav *{
+    line-height:1.2rem;
+}
+nav, footer{
+    background-color: #1b0b34;
+    
+}
+.navbar-custom{
+    background-color: #1b0b34 !important;
+    color: #73C6D4 !important;
+}
+nav *, footer *{
+    color: #73C6D4 !important;
+    
+}
+
+.slider{
+    margin-top:3rem;
+}
+.carousel-inner {
+    /* height:100vh; */
+}
+header {
+}
+.search {
+   position:relative;
+   bottom:25vh;
+}
+#emailHelp{
+    text-align: center;
+}
+.bg-secondary{
+    background-color:#73C6D4!important;
+}
+.card-title{
+    font-family: 'Damion';
+    font-size: 2rem;
+}
+#calendar{
+    margin-top:5rem;
+}
+.navbar-nav{
+    flex-direction:row;
+    justify-content: flex-end;
+}
+.nav-item{
+padding:0 1.5rem;
+}
+.display-4{
+    text-align: center;
+}
+.lead {
+    margin-top:2rem;
+    margin-bottom:0;
+}
+
+
+@media screen and (max-width:800px){
+.search{
+}
+
+}
+@media screen and (max-width:500px){
+    .search{
+        bottom:15vh;
+    }
+    .display-4{
+        font-size: 2rem;
+        margin-bottom:0;
+    }
+}
