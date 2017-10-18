@@ -24,12 +24,27 @@
     <!-- <link href="css/business-frontpage.css" rel="stylesheet"> -->
     <link href="css/mystyles.css" rel="stylesheet">
     
-
- 
   </head>
 
+  
   <body>
-
+      <script>
+          $(document).ready(function(){
+  
+            $('#calendar').fullCalendar({
+                });
+  
+  
+         $('#find').on('click', function(event){
+           event.preventDefault();
+  $('#search').toggle();
+         })
+          $('#close').on('click',function(){
+         $('#search').toggle();
+          });
+  
+          });
+          </script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top navbar-custom">
       <div class="container">
@@ -90,14 +105,15 @@
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-desc1ribedby="emailHelp" placeholder="Search for Events">
               </div>
               <div class="col-1">
-                <button type="submit" class="btn btn-primary">Go</button>
+                <button id='find' type="button" class="btn btn-primary">Go</button>
               </div>
             </div>
             <!-- <small id="emailHelp" class="form-text text-white">Search for Events</small> -->
           </form>
     </header>
 
-
+  
+        
     <div class='py-2 bg-secondary'>
         <div class="container">
           <p class="display-4 text-white">Filter By Category</p>
@@ -155,19 +171,7 @@
       <!-- Calendar -->
       <div id='calendar'></div>
 
-      <script>
-          $(document).ready(function() {
-
-              // page is now ready, initialize the calendar...
-
-              $('#calendar').fullCalendar({
-                  // put your options and callbacks here
-              })
-
-          });
-      </script>
-
-    <!-- Page Content -->
+      <!-- Page Content -->
     <div class="container">
       <div class="row">
         <div class="col-sm-12"></div>
@@ -206,6 +210,58 @@
       </div>
         <!-- /.container -->
     </footer>
+
+    <!-- search -->
+    <div id='search' class='container'>
+      <img id ='close' src='imgs/x.svg'>
+      <div id='results' class="col-12">
+        <h2 class='col-12 text-center'>Search Results</h2>
+      <div class='row d-flex justify-content-around'>
+
+        <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
+  <img class='card-img-top'>
+<div class='card-block'>
+<h4 class='card-title'>title</h4>
+<p>Date:</p>
+<p>Time:</p>
+<p>Location:</p>
+<button class='btn btn-primary'>More</button>
+</div>
+
+
+</div>
+<div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
+    <img class='card-img-top'>
+  <div class='card-block'>
+  <h4 class='card-title'>title</h4>
+  <p>Date:</p>
+  <p>Time:</p>
+  <p>Location:</p>
+  <button class='btn btn-primary'>More</button>
+  </div>
+  </div>
+  <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
+      <img class='card-img-top'>
+    <div class='card-block'>
+    <h4 class='card-title'>title</h4>
+    <p>Date:</p>
+    <p>Time:</p>
+    <p>Location:</p>
+    <button class='btn btn-primary'>More</button>
+    </div>
+<!-- row -->
+      </div>
+<!-- results -->
+      </div>
+      <!-- search -->
+
+
+<!-- <div class='container'></div> -->
+</div>
+
+
+
+    <!-- event -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="./js/popper.min.js"></script>
