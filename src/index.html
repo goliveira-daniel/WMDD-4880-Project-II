@@ -105,12 +105,61 @@
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-desc1ribedby="emailHelp" placeholder="Search for Events">
               </div>
               <div class="col-1">
-                <button id='find' type="button" class="btn btn-primary">Go</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Go</button>
               </div>
             </div>
             <!-- <small id="emailHelp" class="form-text text-white">Search for Events</small> -->
           </form>
     </header>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+       <div class="modal-header">
+         <h2 class="modal-title">Search Results</h2>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+      <div class='modal-body row d-flex justify-content-around'>
+    
+                <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
+          <img class='card-img-top'>
+        <div class='card-block'>
+        <h4 class='card-title'>title</h4>
+        <p>Date:</p>
+        <p>Time:</p>
+        <p>Location:</p>
+        <button class='btn btn-primary'>More</button>
+        </div>
+        </div>
+        
+        <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
+            <img class='card-img-top'>
+          <div class='card-block'>
+          <h4 class='card-title'>title</h4>
+          <p>Date:</p>
+          <p>Time:</p>
+          <p>Location:</p>
+          <button class='btn btn-primary'>More</button>
+          </div>
+          </div>
+         
+          <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
+              <img class='card-img-top'>
+            <div class='card-block'>
+            <h4 class='card-title'>title</h4>
+            <p>Date:</p>
+            <p>Time:</p>
+            <p>Location:</p>
+            <button class='btn btn-primary'>More</button>
+            </div>
+            </div>
+        
+            </div>
+    </div>
+  </div>
+</div>
 
   
         
@@ -227,9 +276,8 @@
 <p>Location:</p>
 <button class='btn btn-primary'>More</button>
 </div>
-
-
 </div>
+
 <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
     <img class='card-img-top'>
   <div class='card-block'>
@@ -240,6 +288,7 @@
   <button class='btn btn-primary'>More</button>
   </div>
   </div>
+ 
   <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
       <img class='card-img-top'>
     <div class='card-block'>
@@ -248,6 +297,9 @@
     <p>Time:</p>
     <p>Location:</p>
     <button class='btn btn-primary'>More</button>
+    </div>
+    </div>
+
     </div>
 <!-- row -->
       </div>

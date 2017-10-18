@@ -101,6 +101,28 @@ height:100%;
     text-decoration: underline;
     margin-bottom:2.5rem;
 }
+.modal-lg{
+    padding: 50px 10px;
+height:100% !important;
+}
+.modal-dialog{
+    padding:50px 10px;
+    overflow:visible;
+    height:80vh !important;
+}
+.modal-content{
+    height:75vh !important;
+    margin-top:2rem;
+}
+p {
+    margin-bottom:.5rem;
+}
+.modal-content .card{
+    height:250px;
+}
+.modal-content card .btn{
+margin-top:1rem;
+}
 
 @media screen and (max-width:800px){
 .search{
