@@ -4,7 +4,7 @@
   "description": "Project for wmdd4980 course on Langara Web and mobile dev program",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./js/api.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/goliveira-daniel/WMDD-4980-Project-II#readme",
   "devDependencies": {
-    "fullcalendar": "^3.5.1"
+    "fullcalendar": "^3.5.1",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "express-http-proxy": "^1.0.7",
+    "node-fetch": "^1.7.3"
   }
 }
