@@ -12,10 +12,13 @@
 
     <link rel='stylesheet' href='./node_modules/fullcalendar/dist/fullcalendar.css' />
 
-
+    
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-
+    <script src='./js/jquery.min.js'></script>
+    <script src='./node_modules/moment/min/moment.min.js'></script>
+    <script src='./node_modules/fullcalendar/dist/fullcalendar.js'></script>
+    
     <!-- Custom styles -->
     <!-- <link href="css/business-frontpage.css" rel="stylesheet"> -->
     <!-- <link href="css/icons.css" rel="stylesheet"> -->
@@ -25,18 +28,18 @@
     <body>
         <script>
             $(document).ready(function() {
-
                 // page is now ready, initialize the calendar...
-
                 $('#calendar').fullCalendar({
+                    // events: 'http://localhost:5000/ticketmaster'
+                    eventSources: [{
+                        url: 'http://localhost:5000/ticketmaster'
+                        , startParam: 'startDateTime'
+                        , endParam: 'endDateTime'
+                    }]
                     // put your options and callbacks here
                 })
-
             });
         </script>
         <div id='calendar'></div>
-        <script src='./js/jquery.min.js'></script>
-        <script src='./node_modules/moment/min/moment.min.js'></script>
-        <script src='./node_modules/fullcalendar/dist/fullcalendar.js'></script>
     </body>
 </html>
