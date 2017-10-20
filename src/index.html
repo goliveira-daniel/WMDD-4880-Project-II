@@ -26,25 +26,18 @@
     
   </head>
 
-  
   <body>
+
       <script>
           $(document).ready(function(){
   
             $('#calendar').fullCalendar({
                 });
-  
-  
-         $('#find').on('click', function(event){
-           event.preventDefault();
-  $('#search').toggle();
-         })
-          $('#close').on('click',function(){
-         $('#search').toggle();
-          });
+
   
           });
           </script>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top navbar-custom">
       <div class="container">
@@ -73,7 +66,7 @@
       </div>
     </nav>
 
-    <!-- Header with Background Image -->
+    <!-- Header with Carousel -->
     <header class="slider">
       <!-- <img class="img-fluid" src="http://via.placeholder.com/2200x550" alt=""> -->
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -112,6 +105,8 @@
           </form>
     </header>
 
+
+<!-- search popup -->
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -123,46 +118,77 @@
           </div>
       <div class='modal-body row d-flex justify-content-around'>
     
-                <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
-          <img class='card-img-top'>
-        <div class='card-block'>
-        <h4 class='card-title'>title</h4>
-        <p>Date:</p>
-        <p>Time:</p>
-        <p>Location:</p>
-        <button class='btn btn-primary'>More</button>
-        </div>
-        </div>
-        
-        <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
-            <img class='card-img-top'>
-          <div class='card-block'>
-          <h4 class='card-title'>title</h4>
-          <p>Date:</p>
-          <p>Time:</p>
-          <p>Location:</p>
-          <button class='btn btn-primary'>More</button>
-          </div>
-          </div>
-         
-          <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
-              <img class='card-img-top'>
-            <div class='card-block'>
-            <h4 class='card-title'>title</h4>
-            <p>Date:</p>
-            <p>Time:</p>
-            <p>Location:</p>
-            <button class='btn btn-primary'>More</button>
+     
+          <div class='py-4 col-sm-8 col-md-6 col-lg-3'>
+              <div class="card text-center">
+                  <img class="card-img-top" src="imgs/sports.jpeg">
+                <span class="icon-dialer_sip display-1"></span>
+                <div class="card-body">
+                  <h4 class="card-title">Title</h4>
+                    <p>Date:</p>
+                  <p>Time:</p>
+                  <p>Location:</p>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary">Show</a>
+                </div>
+              </div>
             </div>
+
+            <div class='py-4 col-sm-8 col-md-6 col-lg-3'>
+                <div class="card text-center">
+                    <img class="card-img-top" src="imgs/sports.jpeg">
+                  <span class="icon-dialer_sip display-1"></span>
+                  <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p>Date:</p>
+                    <p>Time:</p>
+                    <p>Location:</p>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="btn btn-primary">Show</a>
+                  </div>
+                </div>
+              </div>
+
+        <div class='py-4 col-sm-8 col-md-6 col-lg-3'>
+            <div class="card text-center">
+                <img class="card-img-top" src="imgs/sports.jpeg">
+              <span class="icon-dialer_sip display-1"></span>
+              <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                  <p>Date:</p>
+                <p>Time:</p>
+                <p>Location:</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">Show</a>
+              </div>
             </div>
-        
+          </div>
+
+          <nav aria-label="...">
+            <ul class="pagination pagination-sm">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+
+        <!-- endmodal -->
             </div>
     </div>
   </div>
 </div>
 
   
-        
+        <!-- banner -->
     <div class='py-2 bg-secondary'>
         <div class="container">
           <p class="display-4 text-white">Filter By Category</p>
@@ -173,21 +199,22 @@
 <!-- Cards -->
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 col-md-6 col-lg-4 my-4 d-flex align-items-stretch">
+
+        <div class="col-sm-8 col-md-6 mx-auto col-lg-4 my-4 d-flex align-items-stretch">
           <div class="card text-center">
               <img class="card-img-top" src="imgs/music.jpeg">
-              
             <span class="icon-dialer_sip display-1"></span>
             <div class="card-body">
               <h4 class="card-title">Music <br>+<br> Events</h4>
               <!-- <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam quidem perferendis, iure enim praesentium architecto.</p> -->
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Show</a>
+              <a href="#calendar" class="btn btn-primary">Show</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-8 col-md-6 col-lg-4 my-4 d-flex align-items-stretch">
+
+        <div class="col-sm-8 col-md-6 mx-auto col-lg-4 my-4 d-flex align-items-stretch">
           <div class="card text-center">
               <img class="card-img-top" src="imgs/art.jpeg">
             <span class="icon-language display-1"></span>
@@ -196,7 +223,7 @@
               <!-- <p class="card-text text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio minus fugiat saepe porro, a molestias harum similique maxime? Cumque, laudantium ea.</p> -->
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-info">Show</a>
+              <a href="#calendar" class="btn btn-info">Show</a>
             </div>
           </div>
         </div>
@@ -210,7 +237,7 @@
               <!-- <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam quas exercitationem in vero debitis sit alias ipsum quaerat?</p> -->
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-success">Show</a>
+              <a href="#calendar" class="btn btn-success">Show</a>
             </div>
           </div>
         </div>
@@ -236,8 +263,6 @@
     </div> 
       <!-- /.row -->
      
-      <!-- /.row -->
-    </div>
     <!-- /.container -->
 
     <!-- Footer -->
@@ -259,58 +284,6 @@
       </div>
         <!-- /.container -->
     </footer>
-
-    <!-- search -->
-    <div id='search' class='container'>
-      <img id ='close' src='imgs/x.svg'>
-      <div id='results' class="col-12">
-        <h2 class='col-12 text-center'>Search Results</h2>
-      <div class='row d-flex justify-content-around'>
-
-        <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
-  <img class='card-img-top'>
-<div class='card-block'>
-<h4 class='card-title'>title</h4>
-<p>Date:</p>
-<p>Time:</p>
-<p>Location:</p>
-<button class='btn btn-primary'>More</button>
-</div>
-</div>
-
-<div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
-    <img class='card-img-top'>
-  <div class='card-block'>
-  <h4 class='card-title'>title</h4>
-  <p>Date:</p>
-  <p>Time:</p>
-  <p>Location:</p>
-  <button class='btn btn-primary'>More</button>
-  </div>
-  </div>
- 
-  <div class='py-4 card col-sm-8 col-md-6 col-lg-3 text-center'>
-      <img class='card-img-top'>
-    <div class='card-block'>
-    <h4 class='card-title'>title</h4>
-    <p>Date:</p>
-    <p>Time:</p>
-    <p>Location:</p>
-    <button class='btn btn-primary'>More</button>
-    </div>
-    </div>
-
-    </div>
-<!-- row -->
-      </div>
-<!-- results -->
-      </div>
-      <!-- search -->
-
-
-<!-- <div class='container'></div> -->
-</div>
-
 
 
     <!-- event -->
