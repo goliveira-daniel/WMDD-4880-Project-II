@@ -25,6 +25,7 @@
     "express": "^4.16.2",
     "express-http-proxy": "^1.0.7",
     "node-fetch": "^1.7.3",
+    "obstruction": "^2.1.0",
     "request-promise": "^4.2.2"
   }
 }
