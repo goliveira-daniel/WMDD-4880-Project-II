@@ -9,29 +9,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You'll need Node.JS and NPM to install the tools used in this project.
 
-```
-Give examples
-```
+Once installed, navigate to the folder containing package.json file and type 'npm install' 
 
 ### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
+Automated test not implemented yet.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Run command 'gulp deploy' on src folder to deploy this project to a hosting server via FTP. A .env file with login information must be provided.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Here's a list of tools, libraries and others components used in this project. Links for them might or might not be provided. Google it ;)
+
+* [Gulp](https://gulpjs.com/) - The task manager
+* [Bootstrap](http://getbootstrap.com) - The web framework used
+* [NPM](https://www.npmjs.com/) - Dependency Management
 
 ## Contributing
 
@@ -43,7 +39,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Daniel Garcia de Oliveira** - *Initial work* - [PersonalPage](http://daniel.github.io/)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
