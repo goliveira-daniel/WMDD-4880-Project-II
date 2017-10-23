@@ -5,5 +5,5 @@ const config = require ('../config.js');
 const rp = require('request-promise');
 
 module.exports = (req) => {
-    return rp(`${config.ticketmasterApiUrl}&startDateTime=${req.startDateTime}&endDateTime=${req.endDateTime}`)
+    return rp(`${config.ticketmasterApiUrl}&startDateTime=${req.startDateTime}&endDateTime=${req.endDateTime}&city=vancouver`)
 }
