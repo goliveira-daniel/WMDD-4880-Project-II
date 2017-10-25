@@ -29,49 +29,15 @@
   <body>
 
       <script>
-        $(document).ready(function(){
-          $('#calendar').fullCalendar({
-            // themeSystem: 'bootstrap3',
-            eventSources: [
-              {
-                  url: 'http://localhost:5000/ticketmaster'
-                  , startParam: 'startDateTime'
-                  , endParam: 'endDateTime'
-                  , error: function() {
-                      alert('there was an error while fetching events!');
-                  }
-                  , statusCode: {
-                      // 200: function() {
-                      //     alert( "got data" );
-                      // }
-                  }
-                  , success: function(data,textStatus,jqXHR) {
-                      console.log(data)
-                      // console.log(jqXHR)
-                  }
-              },
-              {
-                  url: 'http://localhost:5000/eventful'
-                  // , startParam: 'startDateTime'
-                  // , endParam: 'endDateTime'
-                  , error: function() {
-                      alert('there was an error while fetching events!');
-                  }
-                  , statusCode: {
-                      // 200: function() {
-                      //     alert( "got data" );
-                      // }
-                  }
-                  , success: function(data,textStatus,jqXHR) {
-                      console.log(data)
-                      // console.log(jqXHR)
-                  }
-              }
-            ]
-            // put your options and callbacks here
-          })
-        });
-      </script>
+          $(document).ready(function(){
+  
+            $('#calendar').fullCalendar({
+                });
+
+  
+          });
+          </script>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top navbar-custom">
       <div class="container">
@@ -288,7 +254,9 @@
           <h2 class="mt-4 display-4">Never miss your favourite performer again</h2>
           <p class="lead col-12">Powered by:</p>
           <hr class="col-12">
-          <p class='col-12'>List of Apis go here</p>
+          <img class="eventful" src="imgs/eventful-logo.png">
+          <img class="ticketmaster" src="imgs/ticketmaster-logo.png">
+          
           <p>
             <!-- <a class="btn btn-primary btn-lg" href="#">Cool button</a> -->
           </p>
@@ -325,7 +293,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <!-- <script src="./js/index.js"></script> -->
+    <script src="./js/index.js"></script>
 
   </body>
 
