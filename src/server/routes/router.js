@@ -1,10 +1,13 @@
 const router = require('express').Router();
-// const router = new Router();
 const ticketmasterController = require('../controllers/ticketmasterController')
+const eventfulController = require('../controllers/eventfulController')
 
 // Get all Data
-// router.route('/ticketmaster').get(ticketmasterController.getData());
 router.use('/ticketmaster', ticketmasterController)
+
+router.use('/eventful', eventfulController)
+
+module.exports = router;
 // Get one post by cuid
 // router.route('/ticketmaster/:cuid').get(ticketmasterController.getPost);
 
@@ -13,6 +16,3 @@ router.use('/ticketmaster', ticketmasterController)
 
 // Delete a post by cuid
 // router.route('/posts/:cuid').delete(ticketmasterController.deletePost);
-
-module.exports = router;
-
