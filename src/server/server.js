@@ -3,9 +3,7 @@ const request = require('request');
 const express = require('express')
 const app = express()
 const router = require('./routes/router')
-// const ticketmaster = require ('./ticketmaster.js')
 // const http = require('http')
-// const fetch = require('node-fetch');
 // const proxy = require('express-http-proxy');
 
 app.listen(config.port, function () {
@@ -19,10 +17,6 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', router);
-
-// app.get('/ticketmaster', function (req, res, next) {
-//     request('https://app.ticketmaster.com/discovery/v2/events.json?apikey=GS6WU1hghewo5mdMyZRwrRcUij0sezCS').pipe(res)
-// })
 
 /*http.createServer((req, res) => {
     res.setHeader('Content-Type', 'application/json')
@@ -49,11 +43,3 @@ app.use('/', router);
         res.end('try "/ticketmaster" or "/eventful"')
     }
 }).listen(5000)*/
-
-// app.get('/ticketmaster', proxy('https://app.ticketmaster.com/discovery/v2/events.json?apikey=GS6WU1hghewo5mdMyZRwrRcUij0sezCS'))
-//     // const apiUrl = ``
-//     request('https://app.ticketmaster.com/discovery/v2/events.json?apikey=GS6WU1hghewo5mdMyZRwrRcUij0sezCS', function (error, response, body) {
-//     console.log('error:', error); // Print the error if one occurred
-//     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-//     console.log('body:', body); // Print the HTML for the Google homepage.
-// });

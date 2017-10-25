@@ -32,22 +32,42 @@
                 $('#calendar').fullCalendar({
                     themeSystem: 'bootstrap3',
                     // events: 'http://localhost:5000/ticketmaster'
-                    eventSources: [{
-                        url: 'http://localhost:5000/ticketmaster'
-                        , startParam: 'startDateTime'
-                        , endParam: 'endDateTime'
-                        , error: function() {
-                            alert('there was an error while fetching events!');
+                    eventSources: [
+                        {
+                            url: 'http://localhost:5000/ticketmaster'
+                            , startParam: 'startDateTime'
+                            , endParam: 'endDateTime'
+                            , error: function() {
+                                alert('there was an error while fetching events!');
+                            }
+                            , statusCode: {
+                                // 200: function() {
+                                //     alert( "got data" );
+                                // }
+                            }
+                            , success: function(data,textStatus,jqXHR) {
+                                console.log(data)
+                                // console.log(jqXHR)
+                            }
+                        },
+                        {
+                            url: 'http://localhost:5000/eventful'
+                            // , startParam: 'startDateTime'
+                            // , endParam: 'endDateTime'
+                            , error: function() {
+                                alert('there was an error while fetching events!');
+                            }
+                            , statusCode: {
+                                // 200: function() {
+                                //     alert( "got data" );
+                                // }
+                            }
+                            , success: function(data,textStatus,jqXHR) {
+                                console.log(data)
+                                // console.log(jqXHR)
+                            }
                         }
-                        , statusCode: {
-                            200: function() {
-                                alert( "got data" );
-                        }}
-                        , success: function(data,textStatus,jqXHR) {
-                            console.log(data)
-                            console.log(jqXHR)
-                        }
-                    }]
+                    ]
                     // put your options and callbacks here
                 })
             });
