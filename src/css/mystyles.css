@@ -96,6 +96,21 @@ margin-top:1rem;
     background-color: white;
 }
 
+.eventful {
+	height: 18%;
+	width: 18% ;
+	margin-bottom: 10px;
+}
+
+.ticketmaster {
+	height: 30%;
+	width: 30% ;
+	margin-left: 40px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+
 @media screen and (max-width:800px){
 
 
