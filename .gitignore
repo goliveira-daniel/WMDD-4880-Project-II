@@ -55,3 +55,4 @@ Temporary Items
 
 # Ignore node modules folder and files, run NPM install to install them all again
 node_modules
+.env
