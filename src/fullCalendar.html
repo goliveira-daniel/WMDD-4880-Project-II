@@ -15,6 +15,7 @@
     
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/loader.css" rel="stylesheet">
     <script src='./js/jquery.min.js'></script>
     <script src='./node_modules/moment/min/moment.min.js'></script>
     <script src='./node_modules/fullcalendar/dist/fullcalendar.js'></script>
@@ -42,36 +43,44 @@
                             }
                             , statusCode: {
                                 // 200: function() {
-                                //     alert( "got data" );
-                                // }
-                            }
-                            , success: function(data,textStatus,jqXHR) {
-                                console.log(data)
-                                // console.log(jqXHR)
-                            }
-                        },
-                        {
-                            url: 'http://localhost:5000/eventful'
-                            // , startParam: 'startDateTime'
-                            // , endParam: 'endDateTime'
-                            , error: function() {
-                                alert('there was an error while fetching events!');
-                            }
-                            , statusCode: {
-                                // 200: function() {
-                                //     alert( "got data" );
-                                // }
-                            }
-                            , success: function(data,textStatus,jqXHR) {
-                                console.log(data)
-                                // console.log(jqXHR)
-                            }
-                        }
-                    ]
+                                    //     alert( "got data" );
+                                    // }
+                                }
+                                , success: function(data,textStatus,jqXHR) {
+                                    console.log(data)
+                                    // console.log(jqXHR)
+                                }
+                            },
+                            {
+                                url: 'http://localhost:5000/eventful'
+                                // , startParam: 'startDateTime'
+                                // , endParam: 'endDateTime'
+                                , error: function() {
+                                    alert('there was an error while fetching events!');
+                                }
+                                , statusCode: {
+                                    // 200: function() {
+                                        //     alert( "got data" );
+                                        // }
+                                    }
+                                    , success: function(data,textStatus,jqXHR) {
+                                        console.log(data)
+                                        // console.log(jqXHR)
+                                    }
+                                }
+                            ],
+                    loading: function (bool) {
+                        $(".loader").show() // Add your script to show loading
+                    },
+                    eventAfterAllRender: function (view) {
+                        $(".loader").hide() // Add your script to show loading
+                    },
                     // put your options and callbacks here
                 })
             });
         </script>
-        <div id='calendar'></div>
+        <div id='calendar'>
+            <div class="loader"></div>
+        </div>
     </body>
 </html>
