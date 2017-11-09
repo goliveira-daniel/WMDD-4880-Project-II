@@ -1,5 +1,4 @@
 const model = require('../models/ticketmaster')
-const Obstruct = require('obstruction')
 
 const startHour = 'T00:00:00Z'
 const endHour = 'T23:59:59Z'
@@ -13,17 +12,14 @@ function getData(req, res) {
             title: event.name,
             url: event.url,
             start: event.dates.start.localDate,
-            classification: event.classifications[0].segment.name
+            classification: event.classifications[0].segment.name,
+            // imageUrl: event.images.map(images => {
+            //     if (images.ratio == "3_2") {
+            //         return images.url
+            //     }
+            imageUrl: event.images[0].url
+            // })
         }))
-        // Obstruct({
-        //     events: 
-        //     Obstruct.array({
-        //         title: 'name',
-        //         start: 'dates.start.localDate',
-        //         url: true
-        //         // classification: 'classifications[0].segment.name'
-        //     })
-        // },data._embedded)
         return events
     })
     .then((events) => {
