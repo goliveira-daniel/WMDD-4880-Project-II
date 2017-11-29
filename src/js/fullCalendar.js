@@ -106,19 +106,28 @@ function myFunction() {
 	
 
 	localStorage.setItem('filteredValue', JSON.stringify(filteredValue));
-	
-	
-   
-   
 }
 
 
 
 $(document).ready(function() {
   // page is now ready, initialize the calendar...
-	////(localStorage.getItem("data"));
 	if(localStorage.getItem("data")==0 || localStorage.getItem("data")==null){
 		 localStorage.setItem("data",1);
+
+		navigator.geolocation.getCurrentPosition(displayLocationInfo, handleLocationError);
+		
+		function displayLocationInfo(position) {
+				const lng = position.coords.longitude;
+				const lat = position.coords.latitude;
+		
+				console.log(`longitude: ${lng} | latitude: ${lat}`);
+		}
+
+		function handleLocationError(error) {
+			$("#alert-location").fadeIn();
+		}
+		
 		////("myValues "+myValues);
   $("#calendar").fullCalendar({
     themeSystem: "bootstrap3",
