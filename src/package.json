@@ -4,7 +4,9 @@
   "description": "Project for wmdd4980 course on Langara Web and mobile dev program",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect ./server/server.js"
+    "start": "nodemon --inspect ./server/server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,9 +28,15 @@
     "express-http-proxy": "^1.0.7",
     "node-fetch": "^1.7.3",
     "obstruction": "^2.1.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "snyk": "^1.189.0"
   },
   "nodemonConfig": {
-    "ignore": ["*.html", "./css/","./js/"]
-  }
+    "ignore": [
+      "*.html",
+      "./css/",
+      "./js/"
+    ]
+  },
+  "snyk": true
 }
